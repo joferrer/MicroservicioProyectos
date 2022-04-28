@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const registrarRoutes = require('./routes/registrar');
+const usr_proyRoutes = require('./routes/asociarUsuario');
 
 
 //********** Variables de entorno */
@@ -17,7 +18,7 @@ app.use(express.json());
 
 /**  MIDDLEWARE o ROUTES o ENDPOINTS  */
 app.use('/api',registrarRoutes);
-
+app.use('/api',usr_proyRoutes);
 
 /** Inicio del servidor */
 app.listen(port,()=>{

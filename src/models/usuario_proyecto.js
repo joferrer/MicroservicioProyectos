@@ -12,3 +12,4 @@ const usr_proyectSchema = mongoose.Schema({
     }
 
 });
+module.exports = mongoose.model('usuarios_proyectos', usr_proyectSchema);
